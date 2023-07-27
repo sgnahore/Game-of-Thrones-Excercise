@@ -23,7 +23,7 @@ async function mainProgram() {
   logAllPeopleInTree(createStarkTree());
 
   printBanner("WITH STACK - british royals");
-  logAllPeopleInTree(createBritishSuccessionTree());
+  // logAllPeopleInTree(createBritishSuccessionTree());
   printBanner("WITH QUEUE - british royals");
   logAllPeopleInTreeWithQueue(createBritishSuccessionTree());
 

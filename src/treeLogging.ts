@@ -15,9 +15,24 @@ export function logAllPeopleInTree(topPerson: Person): void {
   workStack.push(topPerson);
   console.log("workstack is", workStack);
 
-  while (workStack.length > 0) {}
+  while (workStack.length > 0) {
+    const currentPerson = workStack.pop() as Person;
+    console.log("current person is", currentPerson.name);
+    // console.log("current person's children",currentPerson.children);
+
+    // push each element of currentPerson's children onto the workStack
+    // pushEachElement(currentPerson.children, workStack);
+    workStack.push(...currentPerson.children);
+
+  }
 
   // console.log("TODO!  First person is " + topPerson.name);
+}
+
+function pushEachElement(originArray: Person[], destArray: Person[]): void {
+  for (const element of originArray) {
+    destArray.push(element);
+  }
 }
 
 export function logAllPeopleInTreeWithQueue(topPerson: Person): void {
