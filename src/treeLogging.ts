@@ -23,7 +23,6 @@ export function logAllPeopleInTree(topPerson: Person): void {
     // push each element of currentPerson's children onto the workStack
     // pushEachElement(currentPerson.children, workStack);
     workStack.push(...currentPerson.children);
-
   }
 
   // console.log("TODO!  First person is " + topPerson.name);
